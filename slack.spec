@@ -2,7 +2,7 @@
 Summary:	Slack - configuration management system
 Name:		slack
 Version:	0.15.1
-Release:	0.1
+Release:	0.2
 License:	GPL v2
 Group:		Applications
 Source0:	http://www.sundell.net/~alan/projects/slack/%{name}-%{version}.tar.gz
@@ -34,13 +34,17 @@ Basically, it's a glorified wrapper around rsync.
 
 %{__make} \
 	CFLAGS="%{rpmcflags}" \
-	LDFLAGS="%{rpmldflags}"
+	LDFLAGS="%{rpmldflags}" \
+	libdir="%{_libdir}"\
+	libexecdir="%{_libdir}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+	DESTDIR=$RPM_BUILD_ROOT \
+	libdir="%{_libdir}" \
+	libexecdir="%{_libdir}"
 
 %clean
 rm -rf $RPM_BUILD_ROOT
