@@ -1,12 +1,12 @@
 #
 Summary:	Slack - configuration management system
 Name:		slack
-Version:	0.15.1
+Version:	0.15.2
 Release:	0.2
 License:	GPL v2
 Group:		Applications
 Source0:	http://www.sundell.net/~alan/projects/slack/%{name}-%{version}.tar.gz
-# Source0-md5:	500e76c68f6ed3526be31288520bd587
+# Source0-md5:	4056df8e7e152a6e4e6730708a86bd25
 URL:		http://www.sundell.net/~alan/projects/slack/
 BuildRequires:	rpmbuild(macros) >= 1.228
 Requires(post,preun):	/sbin/chkconfig
